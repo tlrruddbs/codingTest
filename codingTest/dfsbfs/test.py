@@ -31,6 +31,12 @@ def dfs1(graph, v, visited):
             dfs1(graph, i, visited)
 
 
+def dfs(graph, start, check):
+    check[start] = True
+
+    for i in graph[start]:
+        if i is not check[i]:
+            dfs(graph, i, check)
 
 def bfs(graph, start, visited):
     queue = deque([start])
