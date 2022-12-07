@@ -1,6 +1,6 @@
 import heapq
 import sys
-input = sys.stdin.readline
+# input = sys.stdin.readline
 INF = int(1e9)
 
 
@@ -42,4 +42,3 @@ for d in distance:
         count += 1
         max_distance = max(max_distance, d)
         print(max_distance)
-print(count -1, max_distance)
