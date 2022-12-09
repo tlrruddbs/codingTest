@@ -1,17 +1,19 @@
-n, m = map(int, input().split())
-arr = [0] * 10
-isused = [0] * 10
+
 
 def func(k):
-    global n
     if k == m:
-        for i in m:
+        for i in range(m):
             print(str(arr[i]), end=' ')
-    for i in n:
-        if isused[i] is False:
+        print()
+    for i in range(1, n+1):
+
+        if isused[i] == 0:
             arr[k] = i
             isused[i] = 1
             func(k+1)
             isused[i] = 0
 
+n, m = map(int, input().split())
+arr = [0] * 10
+isused = [0] * 10
 func(0)
